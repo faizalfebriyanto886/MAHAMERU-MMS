@@ -23,7 +23,7 @@ class _VehicleDetailViewState extends State<VehicleDetailView> {
               Get.back();
             },
             actionButton: [],
-            title: "Vehicle Detail",
+            title: "Kendaraan Detail",
           ),
           body: Container(
             padding: EdgeInsets.all(10),
@@ -80,7 +80,7 @@ class _VehicleDetailViewState extends State<VehicleDetailView> {
                           ),
                           SizedBox(width: 10),
                           Text(
-                            "Info Vehicle",
+                            "Info Kendaraan",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

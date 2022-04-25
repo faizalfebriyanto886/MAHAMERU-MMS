@@ -4,30 +4,32 @@ import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
-class VehicleDetailController extends GetxController {
-  List vehicleDetail = []; // pendefinisian array list kendaraan
+class InspeksiDetailController extends GetxController {
+  List inspeksiList = [];
+  List inspeksiVehicle = [];
 
   var id = Get.arguments;
 
   @override
   void onInit() {
     super.onInit();
-    getAllVehicle();
+    getInstpeksiDetail();
   }
-  getAllVehicle() {
-    serviceVehicle(
-      url: "http://mahameru.solog.id/api/vehicle/vehicle_card/$id",
-    ).then((value) {
-      var response = value['response'].data['item'];
 
+  getInstpeksiDetail() async {
+    // ignore: avoid_print
+    print(id);
+    serviceInspeksi(
+      url: "http://mahameru.solog.id/api/vehicle/show_vehicle_chek/$id",
+    ).then((value) {
+      var response = value['response'];
       // ignore: avoid_print
       print(response);
-      vehicleDetail.add(response);
       update();
     });
   }
 
-  Future serviceVehicle({
+  Future serviceInspeksi({
     required String url,
   }) async {
     Dio dio = Dio();

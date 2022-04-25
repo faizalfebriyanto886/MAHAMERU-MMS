@@ -97,10 +97,12 @@ class SignInController extends GetxController {
         var response = value['response'].data;
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setBool(SharedPreferencesKey.isLoggedIn, true);
-        prefs.setString(
-            SharedPreferencesKey.accessToken, response['access_token']);
+        prefs.setString(SharedPreferencesKey.accessToken, response['access_token']);
         prefs.setString(SharedPreferencesKey.tokenType, response['token_type']);
         prefs.setInt(SharedPreferencesKey.expiresIn, response['expires_in']);
+
+        // ignore: avoid_print
+        print(response);
 
         Get.offAll(() => DashboardView());
       } else if (value['message'] == "failed") {

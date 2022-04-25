@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mahameru/controller/maintenance/maintenance_list_controller.dart';
 import 'package:mahameru/static/color_app.dart';
+import 'package:mahameru/views/maintenance/maintenance_detail/maintenance_detail_view.dart';
 import 'package:mahameru/widgets/appbar.dart';
 
 class MaintenanceListView extends StatefulWidget {
@@ -148,6 +149,7 @@ class _MaintenanceListViewState extends State<MaintenanceListView> {
                     return Column(
                       children: [
                         ListTile(
+                          onTap: () => Get.to(() => MaintenanceDetailView(), arguments: controller.maintenanceList[index]['id']),
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

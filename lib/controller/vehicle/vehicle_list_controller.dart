@@ -37,15 +37,18 @@ class VehicleListController extends GetxController {
   Future serviceVehicle({
     required String url,
   }) async {
+    // SharedPreferences preferences = await SharedPreferences.getInstance();
+    // String tokenType = preferences.getString(SharedPreferencesKey.tokenType)!;
+    // String accessToken = preferences.getString(SharedPreferencesKey.accessToken)!;
+    String tokenTypeWithAccessToken = "Bearer gPzItwBpFwBKd2OK440YGIUQWvPvPS3y4zgtahBOi0rU3D3hKwqa8w6rf9ecdIve7BmYM7E6nHIyzK6xaJpMT9Q6XbHQo3cow86R";
     Dio dio = Dio();
-    String bearerToken = "Bearer enKvrNdLBQWZLp8FJzmjqVy32DdQ1sijVpP09HtK2PlzO3EASNHwd8OiPPXJP8A8kDNQLtiCeNETN2GLPHX75GNJeDaHYlS4TmkG";
 
     (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (HttpClient client) {
       client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
       return client;
     };
 
-    dio.options.headers["Authorization"] = bearerToken; // token masih dummy
+    dio.options.headers["Authorization"] = tokenTypeWithAccessToken;
     dio.options.headers["Content-Type"] = "application/json";
 
     try {
@@ -53,7 +56,7 @@ class VehicleListController extends GetxController {
         url,
         options: Options(
           headers: {
-            "Authorization": bearerToken
+            "Authorization": tokenTypeWithAccessToken
           },
           followRedirects: true,
           validateStatus: (status) {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mahameru/controller/inspeksi/inspeksi_list_controller.dart';
 import 'package:mahameru/static/color_app.dart';
+import 'package:mahameru/views/inspeksi/inspeksi_detail/inspeksi_detail_view.dart';
 import 'package:mahameru/views/inspeksi/inspeksi_tambah_view.dart';
 import 'package:mahameru/widgets/appbar.dart';
 
@@ -126,7 +127,7 @@ class _InspeksiListViewState extends State<InspeksiListView> {
                   itemCount: controller.inspeksiList.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      onTap: null,
+                      onTap: () => Get.to(() => InspeksiDetailView(), arguments: controller.inspeksiList[index]['id']),
                       leading: CircleAvatar(
                         backgroundColor: Colors.grey.withOpacity(0.2),
                         radius: 20,

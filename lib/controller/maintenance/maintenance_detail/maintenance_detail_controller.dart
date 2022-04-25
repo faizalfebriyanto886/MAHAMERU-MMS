@@ -4,30 +4,50 @@ import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
-class VehicleDetailController extends GetxController {
-  List vehicleDetail = []; // pendefinisian array list kendaraan
+class MaintenanceDetailController extends GetxController {
+  List maintenanceDetail = []; // pendefinisian array list maintenance
+  List maintenanceVendor = [];
+  List maintenanceBarang = [];
+  List maintenanceBarangItems = [];
+  List maintenanceBarangItemsCategory = [];
 
   var id = Get.arguments;
 
   @override
   void onInit() {
     super.onInit();
-    getAllVehicle();
+    getMaintenanceDetail();
   }
-  getAllVehicle() {
-    serviceVehicle(
-      url: "http://mahameru.solog.id/api/vehicle/vehicle_card/$id",
+  getMaintenanceDetail() {
+    // ignore: avoid_print
+    print(id);
+    serviceMaintenance(
+      url: "http://mahameru.solog.id/api/vehicle/show_vehicle_maintenance/$id",
     ).then((value) {
       var response = value['response'].data['item'];
+      var responseDetail = value['response'].data['detail'];
 
       // ignore: avoid_print
-      print(response);
-      vehicleDetail.add(response);
+      print(responseDetail);
+      maintenanceDetail.add(response);
+      maintenanceBarang.addAll(responseDetail);
+
+      for (var elementDetail in maintenanceDetail) {
+        maintenanceVendor.add(elementDetail['vendor']);
+      }
+
+      responseDetail.forEach((elementitem) {
+        maintenanceBarangItems.add(elementitem['item']);
+      });
+
+      for (var elementItemCategory in maintenanceBarangItems) {
+        maintenanceBarangItemsCategory.add(elementItemCategory);
+      }
       update();
     });
   }
 
-  Future serviceVehicle({
+  Future serviceMaintenance({
     required String url,
   }) async {
     Dio dio = Dio();
