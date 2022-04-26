@@ -35,6 +35,7 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                   physics: BouncingScrollPhysics(),
                   itemCount: controller.inspeksiListItem.length,
                   itemBuilder: (context, index) {
+                    // ignore: unused_element
                     isCheckValue(valueCheck) {
                       controller.inspeksiChecklist[index][valueCheck] == 1 ? true : false;
                     }
@@ -186,7 +187,7 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['condition'] == 1 ? true : false : false, 
+                                    value: false, 
                                     onChanged: null
                                   ),
                                 ],
@@ -233,29 +234,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null
                                   )
                                 ],
                               )
@@ -273,29 +262,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -310,32 +287,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -352,30 +317,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -393,29 +346,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -430,32 +371,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -472,30 +401,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -510,32 +427,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -553,29 +458,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -616,30 +509,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children:  [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -657,29 +538,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -696,36 +565,24 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
                             ),
                             ListTile(
                               title: Text(
-                                "LAMPU SIGN BELAKANg KANAN",
+                                "LAMPU SIGN BELAKANG KANAN",
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.normal,
@@ -736,29 +593,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -776,29 +621,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -813,32 +646,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -853,32 +674,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -895,30 +704,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -933,32 +730,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -976,29 +761,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1013,32 +786,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1056,29 +817,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1097,29 +846,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1138,29 +875,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1178,29 +903,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1218,29 +931,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1258,29 +959,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1295,32 +984,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1337,30 +1014,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1377,30 +1042,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1418,29 +1071,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1458,29 +1099,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1497,30 +1126,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1537,30 +1154,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1575,32 +1180,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1615,32 +1208,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1657,30 +1238,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1698,29 +1267,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1738,29 +1295,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1775,32 +1320,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: false, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: false, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: false, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1815,32 +1348,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: false, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: false, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: false, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1855,32 +1376,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1895,32 +1404,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1935,32 +1432,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -1977,30 +1462,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2017,30 +1490,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2055,32 +1516,20 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children: [
+                                children: const [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2097,30 +1546,18 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Checkbox(                  
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    value: true, 
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2138,29 +1575,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2178,29 +1603,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2218,29 +1631,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2258,29 +1659,17 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   )
                                 ],
                               )
@@ -2298,11 +1687,7 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 children: [
                                   Checkbox(                  
                                     value: isChecked, 
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = value!;
-                                      });
-                                    },
+                                    onChanged: null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
