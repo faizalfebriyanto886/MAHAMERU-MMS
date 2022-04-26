@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:mahameru/controller/sign_in_controller.dart';
 import 'package:mahameru/static/color_app.dart';
 import 'package:mahameru/views/authentIcation/forgot_password_view.dart.dart';
-import 'package:mahameru/views/dashboard/dashboard_view.dart';
 import 'package:mahameru/widgets/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -231,8 +230,8 @@ class SignInView extends StatelessWidget {
                 child: AppButton().mainButton(
                   textButton: "Login ke Fleetsumo",
                   function: () {
-                    Get.to(()=> DashboardView());
-                    // controller.validation();
+                    // Get.to(()=> DashboardView());
+                    controller.validation();
                   },
                 ),
               ),

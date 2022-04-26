@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
+import 'package:mahameru/static/shared_preferences_key.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InspeksiListController extends GetxController {
   List inspeksiList = [];
@@ -32,15 +34,19 @@ class InspeksiListController extends GetxController {
   Future serviceInspeksi({
     required String url,
   }) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String accessToken = preferences.getString(SharedPreferencesKey.accessToken)!;
+    String tokenType = "Bearer";
+
+    String tokenTypeWithAccessToken = "$tokenType $accessToken";
     Dio dio = Dio();
-    String bearerToken = "Bearer gPzItwBpFwBKd2OK440YGIUQWvPvPS3y4zgtahBOi0rU3D3hKwqa8w6rf9ecdIve7BmYM7E6nHIyzK6xaJpMT9Q6XbHQo3cow86R";
 
     (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (HttpClient client) {
       client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
       return client;
     };
 
-    dio.options.headers["Authorization"] = bearerToken; // token masih dummy
+    dio.options.headers["Authorization"] = tokenTypeWithAccessToken;
     dio.options.headers["Content-Type"] = "application/json";
 
     try {
@@ -48,7 +54,7 @@ class InspeksiListController extends GetxController {
         url,
         options: Options(
           headers: {
-            "Authorization": bearerToken
+            "Authorization": tokenTypeWithAccessToken
           },
           followRedirects: true,
           validateStatus: (status) {

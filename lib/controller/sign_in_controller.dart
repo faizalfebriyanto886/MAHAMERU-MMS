@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mahameru/services/api_services.dart';
 import 'package:mahameru/static/shared_preferences_key.dart';
 import 'package:mahameru/views/dashboard/dashboard_view.dart';
-import 'package:mahameru/widgets/no_internet_connection_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignInController extends GetxController {
@@ -52,6 +50,11 @@ class SignInController extends GetxController {
   Method untuk mengecek validitas apakah username dan passoword sudah terisi
   */
   validation() async {
+    // ignore: avoid_print
+    print(emailController!.text);
+    // ignore: avoid_print
+    print(passwordController!.text);
+
     if (emailController!.text.isEmpty || passwordController!.text.isEmpty) {
       return Get.snackbar(
         "Peringatan!",
@@ -68,12 +71,7 @@ class SignInController extends GetxController {
         margin: EdgeInsets.only(bottom: 10, right: 10, left: 10),
       );
     } else {
-      bool isOnline = await InternetConnectionChecker().hasConnection;
-      if (isOnline) {
-        signIn();
-      } else {
-        NoInternetConnectionAlert().mainAlert();
-      }
+      signIn();
     }
   }
 
@@ -85,7 +83,7 @@ class SignInController extends GetxController {
       url: "https://mahameru.solog.id/api/v4/login",
       isJson: true,
       parameters: {
-        "email": emailController!.text.toString().trim(),
+        "username": emailController!.text.toString().trim(),
         "password": passwordController!.text.toString().trim(),
       },
     ).then((value) async {
@@ -96,15 +94,12 @@ class SignInController extends GetxController {
       if (value['message'] == "success") {
         var response = value['response'].data;
         SharedPreferences prefs = await SharedPreferences.getInstance();
-        prefs.setBool(SharedPreferencesKey.isLoggedIn, true);
-        prefs.setString(SharedPreferencesKey.accessToken, response['access_token']);
-        prefs.setString(SharedPreferencesKey.tokenType, response['token_type']);
-        prefs.setInt(SharedPreferencesKey.expiresIn, response['expires_in']);
+        prefs.setString(SharedPreferencesKey.accessToken, response['api_token']);
 
         // ignore: avoid_print
         print(response);
 
-        Get.offAll(() => DashboardView());
+        Get.off(() => DashboardView());
       } else if (value['message'] == "failed") {
         var response = value['response'].data;
         Get.snackbar(
@@ -137,6 +132,7 @@ class SignInController extends GetxController {
           margin: EdgeInsets.only(bottom: 10, right: 10, left: 10),
         );
       }
+      update();
     });
   }
 

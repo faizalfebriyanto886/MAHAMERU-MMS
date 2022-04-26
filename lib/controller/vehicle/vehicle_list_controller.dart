@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
+import 'package:mahameru/static/shared_preferences_key.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class VehicleListController extends GetxController {
   List arrVehicle = []; // pendefinisian array list kendaraan
@@ -37,10 +39,11 @@ class VehicleListController extends GetxController {
   Future serviceVehicle({
     required String url,
   }) async {
-    // SharedPreferences preferences = await SharedPreferences.getInstance();
-    // String tokenType = preferences.getString(SharedPreferencesKey.tokenType)!;
-    // String accessToken = preferences.getString(SharedPreferencesKey.accessToken)!;
-    String tokenTypeWithAccessToken = "Bearer gPzItwBpFwBKd2OK440YGIUQWvPvPS3y4zgtahBOi0rU3D3hKwqa8w6rf9ecdIve7BmYM7E6nHIyzK6xaJpMT9Q6XbHQo3cow86R";
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String accessToken = preferences.getString(SharedPreferencesKey.accessToken)!;
+    String tokenType = "Bearer";
+
+    String tokenTypeWithAccessToken = "$tokenType $accessToken";
     Dio dio = Dio();
 
     (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (HttpClient client) {

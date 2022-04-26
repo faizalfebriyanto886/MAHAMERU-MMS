@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mahameru/views/authentIcation/signin_view.dart';
 import 'package:mahameru/views/inspeksi/inspeksi_list_view.dart';
 import 'package:mahameru/views/maintenance/maintenance_list_view.dart';
 import 'package:mahameru/views/vehicle/vehicle_list_view.dart';
@@ -16,80 +17,79 @@ class DashboardView extends StatelessWidget {
           children: [
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.2,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Flexible(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 65, 0,0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children:  <Widget>[
-                          Text(
-                            'Mon, 12 April 2022',
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
+              child: ListTile(
+                contentPadding: EdgeInsets.only(top: 70, left: 10, right: 10),
+                title: Text(
+                  'Mon, 12 April 2022',
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontFamily: "Poppins",
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff535353),
+                  ),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    RichText(
+                      text: TextSpan(children: <WidgetSpan>[
+                        WidgetSpan(
+                          child: Text(
+                            "Welcome, ",
                             style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff535353),
-                            ),
-                          ),
-                          RichText(
-                            text: TextSpan(children: <WidgetSpan>[
-                              WidgetSpan(
-                                child: Text(
-                                  "Wellcome, ",
-                                  style: TextStyle(
-                                    color: Color(0xFFC2C2C2),
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 26,
-                                  ),
-                                ),
-                              ),
-                              WidgetSpan(
-                                child: GestureDetector(
-                                  child: Text(
-                                    "Pips",
-                                    style: TextStyle(
-                                      color: Color(0xFF000000),                                      
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 22,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ]),
-                          ),
-                          Text(
-                            'Cabang Makassar',
-                            maxLines: 1,
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 16,
+                              color: Color(0xFFC2C2C2),
                               fontWeight: FontWeight.w600,
-                              color: Color(0xff535353),
+                              fontSize: 26,
                             ),
                           ),
-                        ],
+                        ),
+                        WidgetSpan(
+                          child: GestureDetector(
+                            child: Text(
+                              "Admin",
+                              style: TextStyle(
+                                color: Color(0xFF000000),                                      
+                                fontWeight: FontWeight.w600,
+                                fontSize: 22,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ),
+                    Text(
+                      'Cabang Makassar',
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xff535353),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 0, 8, 8 ),
+                  ],
+                ),
+                trailing: Padding(
+                  padding: const EdgeInsets.fromLTRB(5, 0, 5, 5 ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.offAll(SignInView());
+                    },
                     child: CircleAvatar(
-                      radius: 30,
+                      radius: 33,
                       backgroundColor: Color(0xff757575),
-                      child: const CircleAvatar(
-                        radius: 28,
-                        backgroundImage:
-                            NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF08_xClH0kMaGwISlQGgr94vV71g5BkN0kw&usqp=CAU'),
+                      child: CircleAvatar(
+                        radius: 24,
+                        child: Image.asset(
+                          "assets/images/avatar-new.png",
+                          width: 60,
+                        ),
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
             ),
             Padding(

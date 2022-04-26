@@ -217,11 +217,11 @@ class ApiServices {
     try {
       Response response = await dio.post(
         url,
-        data: isJson ? parameters : parameters,
+        data: isJson ? parameters : FormData.fromMap(parameters),
         options: Options(
           followRedirects: false,
           validateStatus: (status) {
-            return status! < 500;
+            return status! < 600;
           },
         ),
       );
@@ -408,4 +408,5 @@ class ApiServices {
       }
     }
   }
+  
 }
