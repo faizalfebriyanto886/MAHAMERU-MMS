@@ -28,7 +28,7 @@ class _VehicleTambahChecklistKelengkapanViewState extends State<VehicleTambahChe
         ),
         actions: [
           GestureDetector(
-            onTap: () => Get.to(VehicleTambahCheckListBodyView()),
+            onTap: () => Get.to(() => VehicleTambahCheckListBodyView()),
             child: Padding(
               padding: const EdgeInsets.only(right: 10, top: 17),
               child: Text(

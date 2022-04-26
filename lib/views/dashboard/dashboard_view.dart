@@ -149,7 +149,7 @@ class DashboardView extends StatelessWidget {
                       cardMenu(
                         title: "Kendaraan", 
                         image: Image(image: AssetImage("assets/icons/truck.png"), height: 36,),
-                        routeTo: () => Get.to(VehicleListView(title: 'Kendaraan',)),
+                        routeTo: () => Get.to(() => VehicleListView(title: 'Kendaraan',)),
                       ),
                       cardMenu(
                         title: "Ban", 
@@ -160,7 +160,7 @@ class DashboardView extends StatelessWidget {
                       cardMenu(
                         title: "Perawatan", 
                         image: Image(image: AssetImage("assets/icons/setting.png"), height: 36,),
-                        routeTo: () => Get.to(MaintenanceListView(title: "Perawatan")),
+                        routeTo: () => Get.to(() => MaintenanceListView(title: "Perawatan")),
                       ),
                       cardMenu(
                         title: "Cek KM", 
@@ -177,7 +177,7 @@ class DashboardView extends StatelessWidget {
                       cardMenu(
                         title: "Inspeksi", 
                         image: Image(image: AssetImage("assets/icons/inspeksi.png"), height: 36,),
-                        routeTo: () => Get.to(InspeksiListView(title: "Inspeksi")),
+                        routeTo: () => Get.to(() => InspeksiListView(title: "Inspeksi")),
                       ),
                       cardMenu(
                         title: "Inventory", 

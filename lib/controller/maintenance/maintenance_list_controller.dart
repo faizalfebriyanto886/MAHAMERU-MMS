@@ -44,14 +44,21 @@ class MaintenanceListController extends GetxController {
       var response = value['response'].data['data'];
       maintenanceList.addAll(response);
       // ignore: avoid_print
-      // print(response);
-      response.forEach((element) {
+      for (var element in maintenanceList) {
         // ignore: avoid_print
         print(element);
         if (element['status'] == "1") {
-          filterPengajuan.add(element);
+          selectedCategory == "All";
+        } else if (element['status'] == "2") {
+          selectedCategory == "Pengajuan";
+        } else if (element['status'] == "3") {
+          selectedCategory == "Rencana";
+        } else if (element['status'] == "4") {
+          selectedCategory == "Perawatan";
+        } else if (element['status'] == "5") {
+          selectedCategory == "Selesai";
         }
-      });
+      }
       update();
     });
   }
@@ -70,8 +77,10 @@ class MaintenanceListController extends GetxController {
     }
   }
 
-  filterStatus() {
-    
+  filterStatus(int indexStatus) {
+    selectedCategory = titleCategory[indexStatus];
+    update();
+    getMaintenanceList();
   }
 
   Future serviceMaintenance({

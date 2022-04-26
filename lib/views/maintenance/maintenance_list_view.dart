@@ -55,7 +55,7 @@ class _MaintenanceListViewState extends State<MaintenanceListView> {
                           label: InkWell(
                             onTap: () async {
                               setState(() {
-                                controller.changeCategory(index);
+                                controller.filterStatus(index);
                               });
                             },
                             child: Text(

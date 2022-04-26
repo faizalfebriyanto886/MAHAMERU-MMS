@@ -50,7 +50,7 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                           ),
                           child: ListTile(
                             title: Text(
-                              controller.inspeksiListItem[index]['officer'],
+                              controller.inspeksiListItem[index] == null ? "Data Kosong" : controller.inspeksiListItem[index]['officer'],
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -61,7 +61,7 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  controller.inspeksiListItem[index]['date_transaction'],
+                                  controller.inspeksiListItem[index] == null ? "Data Kosong" : controller.inspeksiListItem[index]['date_transaction'],
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -147,19 +147,19 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                               ),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
-                                children:  [
+                                children: [
                                   Checkbox(
-                                    value: controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['is_exist'] == 1 ? true : false : false,
+                                    value: controller.inspeksiChecklist[index] == null ? false : controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['is_exist'] == 1 ? true : false : false,
                                     onChanged:  null,
                                   ),
                                   SizedBox(width: 15),
                                   Checkbox(
-                                    value: controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['is_function'] == 1 ? true : false : false,
+                                    value: controller.inspeksiChecklist[index] == null ? false : controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['is_function'] == 1 ? true : false : false,
                                     onChanged: null
                                   ),
                                   SizedBox(width: 10),
                                   Checkbox(
-                                    value: controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['condition'] == 1 ? true : false : false, 
+                                    value: controller.inspeksiChecklist[index] == null ? false : controller.inspeksiChecklist[index]['id'] == 1 ? controller.inspeksiChecklist[index]['condition'] == 1 ? true : false : false,
                                     onChanged: null
                                   ),
                                 ],

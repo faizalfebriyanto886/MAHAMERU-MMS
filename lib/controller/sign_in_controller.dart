@@ -98,6 +98,8 @@ class SignInController extends GetxController {
 
         // ignore: avoid_print
         print(response);
+        // ignore: avoid_print
+        print("Token API = ${response['api_token']}");
 
         Get.off(() => DashboardView());
       } else if (value['message'] == "failed") {
