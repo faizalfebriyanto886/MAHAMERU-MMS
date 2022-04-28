@@ -37,7 +37,23 @@ class _VehicleListViewState extends State<VehicleListView> {
               Icons.add,
             ),
           ),
-          body: Center(
+          body: controller.isLoading ? Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                CircularProgressIndicator(),
+                SizedBox(height: 10),
+                Text(
+                  "Sedang Memuat data",
+                  style: TextStyle(
+                    color: Colors.black,
+                    // fontWeight: FontWeight.bold
+                  ),
+                )
+              ],
+            )
+          ) :
+          Center(
             child: ListView(
               padding: EdgeInsets.all(10),
               children: [
@@ -143,15 +159,7 @@ class _VehicleListViewState extends State<VehicleListView> {
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              Text(" • ", style: TextStyle(color: Colors.grey),),
-                              Text(
-                                controller.arrVehicle[index]['supplier_id'],
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400
-                                ),
-                              )
+                              
                             ],
                           ),
                           subtitle: Column(
@@ -202,7 +210,7 @@ class _VehicleListViewState extends State<VehicleListView> {
                                     radius: 5,
                                   ),
                                   SizedBox(width: 10),
-                                  Text("avaliable")
+                                  Text("available")
                                 ],
                               ),
                             ],

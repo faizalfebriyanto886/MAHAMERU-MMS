@@ -7,11 +7,12 @@ import 'package:mahameru/static/shared_preferences_key.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MaintenanceListController extends GetxController {
+  bool isLoading = true;
   List maintenanceList = [];
 
-  String selectedCategory = "All";
+  String selectedCategory = "Semua";
   List titleCategory = [
-    "All",
+    "Semua",
     "Pengajuan",
     "Rencana",
     "Perawatan",
@@ -43,12 +44,13 @@ class MaintenanceListController extends GetxController {
     ).then((value) {
       var response = value['response'].data['data'];
       maintenanceList.addAll(response);
+      isLoading = false;
       // ignore: avoid_print
       for (var element in maintenanceList) {
         // ignore: avoid_print
         print(element);
         if (element['status'] == "1") {
-          selectedCategory == "All";
+          selectedCategory == "Semua";
         } else if (element['status'] == "2") {
           selectedCategory == "Pengajuan";
         } else if (element['status'] == "3") {

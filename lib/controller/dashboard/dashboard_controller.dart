@@ -6,45 +6,29 @@ import 'package:get/get.dart';
 import 'package:mahameru/static/shared_preferences_key.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class InspeksiDetailController extends GetxController {
-  List inspeksiListItem = [];
-  List inspeksiChecklist = [];
-  List inspeksiBody = [];
-  String idKelengkapan = "";
+class DashboardController extends GetxController {
+  List userDetail = [];
 
-  var id = Get.arguments;
 
   @override
   void onInit() {
     super.onInit();
-    getInstpeksiDetail();
+    getDashboard();
   }
 
-  getInstpeksiDetail() async {
-    // ignore: avoid_print
-    print(id);
-    serviceInspeksi(
-      url: "http://mahameru.solog.id/api/vehicle/show_vehicle_chek/$id",
-    ).then((value) {
-      var response = value['response'].data['item'];
-      var responseChecklist = value['response'].data['checklist'];
-      var responseBody = value['response'].data['body'];
+  getDashboard() {
+    serviceDashboard(
+      url: "http://mahameru.solog.id/api/v4/get_user"
+    ).then((value) async {
       // ignore: avoid_print
-      // print(response);
-      inspeksiListItem.add(response);
+      print(value['response'].data);
 
-      // ignore: avoid_print
-      print(responseChecklist);
-      inspeksiChecklist.addAll(responseChecklist);
-      // ignore: avoid_print
-      // print(responseBody);
-
-      inspeksiBody.addAll(responseBody);
-      update();
+      var response = value['response'].data;
+      userDetail.add(response);
     });
   }
 
-  Future serviceInspeksi({
+  Future serviceDashboard({
     required String url,
   }) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();

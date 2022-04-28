@@ -7,6 +7,7 @@ import 'package:mahameru/static/shared_preferences_key.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class VehicleListController extends GetxController {
+  bool isLoading = true;
   List arrVehicle = []; // pendefinisian array list kendaraan
   List vehicleVariantList = [];
   List companyList = [];
@@ -31,6 +32,7 @@ class VehicleListController extends GetxController {
         companyList.add(responseData['company']);
         supplierList.add(responseData['supplier']);
         vehicleVariantList.add(responseData['vehicle_variant']);
+        isLoading = false;
       });
       update();
     });

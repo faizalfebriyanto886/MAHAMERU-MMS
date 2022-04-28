@@ -24,6 +24,14 @@ class _MaintenanceListViewState extends State<MaintenanceListView> {
     return GetBuilder<MaintenanceListController>(
       builder: (_) {
         return Scaffold(
+          floatingActionButton: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: FloatingActionButton(
+              onPressed: null,
+              backgroundColor: Colors.blue[200],
+              child: Icon(Icons.more_vert),
+            ),
+          ),
           appBar: AppBarUI().appBarWithBackButton(
             actionBackButton: () {
               Get.back();
@@ -31,7 +39,22 @@ class _MaintenanceListViewState extends State<MaintenanceListView> {
             actionButton: [],
             title: widget.title,
           ),
-          body: Center(
+          body: controller.isLoading ? Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                CircularProgressIndicator(),
+                SizedBox(height: 10,),
+                Text(
+                  "Sedang Memuat Data",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600
+                  ),
+                )
+              ],
+            ),
+          ) : Center(
             child: ListView(
               padding: EdgeInsets.all(10),
               children: [
@@ -186,7 +209,7 @@ class _MaintenanceListViewState extends State<MaintenanceListView> {
                                   ),
                                   Text(" • ", style: TextStyle(color: Colors.grey),),
                                   Text(
-                                    controller.maintenanceList[index]['date_perawatan'] ?? "Tanggal Kosong",
+                                    controller.maintenanceList[index]['date_perawatan'] ?? "Tgl Kosong",
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,
@@ -229,10 +252,7 @@ class _MaintenanceListViewState extends State<MaintenanceListView> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12, right: 12),
-                          child: Divider(),
-                        )
+                        SizedBox(height: 9,)
                       ],
                     );
                   },

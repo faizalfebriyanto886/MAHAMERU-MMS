@@ -40,7 +40,22 @@ class _InspeksiListViewState extends State<InspeksiListView> {
               Icons.add,
             ),
           ),
-          body: Center(
+          body: controller.isLoading ? Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                CircularProgressIndicator(),
+                SizedBox(height: 10,),
+                Text(
+                  "Sedang Memuat Data",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500
+                  ),
+                )
+              ],
+            ),
+          ) : Center(
             child: ListView(
               padding: EdgeInsets.all(10),
               children: [

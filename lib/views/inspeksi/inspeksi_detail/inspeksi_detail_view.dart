@@ -70,6 +70,13 @@ class _InspeksiDetailViewState extends State<InspeksiDetailView> {
                                 ),
                               ],
                             ),
+                            trailing: CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: Icon(
+                                Icons.create,
+                                color: Colors.blue[200],
+                              ),
+                            ),
                           ),
                         ),
 

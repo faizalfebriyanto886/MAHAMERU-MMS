@@ -7,6 +7,7 @@ import 'package:mahameru/static/shared_preferences_key.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class InspeksiListController extends GetxController {
+  bool isLoading = true;
   List inspeksiList = [];
   List inspeksiVehicle = [];
   @override
@@ -23,6 +24,7 @@ class InspeksiListController extends GetxController {
       // ignore: avoid_print
       print(response);
       inspeksiList.addAll(response);
+      isLoading = false;
 
       response.forEach((element) {
         inspeksiVehicle.add(element['vehicle']);
